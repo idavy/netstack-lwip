@@ -76,7 +76,7 @@
 
 #if TARGET_OS_IPHONE
 #define LWIP_TCP_KEEPALIVE 1
-#define MEMP_NUM_TCP_PCB 256
+#define MEMP_NUM_TCP_PCB 1024
 #else
 #define MEMP_NUM_TCP_PCB 1024
 #endif
@@ -113,7 +113,7 @@
 #if defined __APPLE__
 #include <TargetConditionals.h>
 #if TARGET_OS_IPHONE
-#define MEM_SIZE (512 * 1024)
+#define MEM_SIZE (2 * 1024 * 1024)
 #else
 #define MEM_SIZE (2 * 1024 * 1024)
 #endif
